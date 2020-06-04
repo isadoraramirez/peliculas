@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{Component} from 'react';
+import Search from './components/Search'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+class App extends Component{
+
+    state = {
+      word: 'hola'
+    }
+
+//toma el texto insertado en el buscador y lo pasa al padre:
+  informationSearch = (word) => {
+     this.setState({
+       word
+     })
+  }
+
+    render() {
+      return(
+      <div className="app container">
+     
+        <div className="jumbotron">
+          <p className="lead text-center"
+          ><h1>Busca Peliculas</h1></p>
+
+          <Search
+           informationSearch={this.informationSearch}
+           />
+          
+
+        </div>
+         {this.state.word}
+     
     </div>
   );
+ }
 }
 
 export default App;
