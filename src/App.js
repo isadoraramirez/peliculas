@@ -34,7 +34,9 @@ class App extends Component{
      
         <div className="jumbotron">
           <p className="lead text-center"
-          ><h1>Busca Peliculas</h1></p>
+          >
+            <h1>Busca Peliculas</h1>
+            </p>
 
           <Search
            informationSearch={this.informationSearch}
@@ -44,6 +46,7 @@ class App extends Component{
         </div>
          <Result
          films= {this.state.movies}
+         
          />
      
     </div>

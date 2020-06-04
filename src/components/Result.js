@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Film from './Film'
+import Film from './Film';
 
 class Result extends Component {
     showFilms= () =>{
@@ -12,9 +12,10 @@ class Result extends Component {
             <React.Fragment>
                 <div className="col-12 p-5 row">
                     {films.map(film=>
-                        <Film key={films.id}>
-                         pelicula  
-                        </Film>
+                        <Film
+                        key={film.imdbID}
+                        film={film}
+                        />
                         )}
                 </div>
             </React.Fragment>
