@@ -4,7 +4,7 @@ import Search from './components/Search'
 class App extends Component{
 
     state = {
-      word: 'hola'
+      word: 'holaqlalalala'
     }
 
 //toma el texto insertado en el buscador y lo pasa al padre:
