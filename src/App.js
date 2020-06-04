@@ -35,7 +35,8 @@ class App extends Component{
         <div className="jumbotron">
           <p className="lead text-center"
           >
-            <h1>Busca Peliculas</h1>
+            <h1>Film Posters</h1>
+            <h2>Find your favorite movie poster</h2>
             </p>
 
           <Search
