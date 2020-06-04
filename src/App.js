@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
-import Search from './components/Search'
+import Search from './components/Search';
+import Result from './components/Result';
 
 class App extends Component{
 
@@ -14,8 +15,8 @@ class App extends Component{
       //aca podria haver usado axios 
       fetch(url)
        .then(answer => answer.json())
-       //.then(result => this.setState({ movies : result.title}))
-       .then(result => console.log(result))
+       //.then(data => console.log(data.Search))
+       .then(data => this.setState ({movies: data.Search}))
     }
 
 //toma el texto insertado en el buscador y lo pasa al padre:
@@ -41,7 +42,9 @@ class App extends Component{
           
 
         </div>
-         {this.state.word}
+         <Result
+         films= {this.state.movies}
+         />
      
     </div>
   );
