@@ -4,13 +4,26 @@ import Search from './components/Search'
 class App extends Component{
 
     state = {
-      word: 'holaqlalalala'
+      word: '',
+      movies : []
+    }
+
+    consultApi = () => {
+      const url = `https://www.omdbapi.com/?apikey=60fc1083&s=${this.state.word}`;
+      //console.log(url);
+      //aca podria haver usado axios 
+      fetch(url)
+       .then(answer => answer.json())
+       //.then(result => this.setState({ movies : result.title}))
+       .then(result => console.log(result))
     }
 
 //toma el texto insertado en el buscador y lo pasa al padre:
   informationSearch = (word) => {
      this.setState({
        word
+     },() => {
+       this.consultApi();
      })
   }
 
