@@ -8,12 +8,12 @@ const Film = (props) => {
 
      return (
         <div className= "col-3">
-             <div className="card-body">
-                  <img src={Poster} alt={Year} className="card-img-top"  />
-                  <div className="card-body">
-                     <p className="card-text">Titulo: {Title}</p> 
-                     <p className="card-text">Año: {Year}</p>  
-                     <a href= {Poster} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-block">Ver Poster</a> 
+             <div className="Card.Body">
+                  <img src={Poster} class="img-responsive" alt={Year} className="card-img-top"  />
+                  <div className="Card.Body">
+                     <p className="Card.Text">Titulo: {Title}</p> 
+                     <p className="Card.Text">Año: {Year}</p>  
+                     <a href= {Poster}  rel="noopener noreferrer" target="_blank" className="btn btn-secondary btn-block">Ver Poster</a> 
         
                   </div>
                  
